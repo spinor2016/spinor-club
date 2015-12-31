@@ -1,0 +1,64 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Spinors Club Poland</title>
+  <meta name="description" content="Spinors Club - oficjalna strona.">
+  <meta name="author" content="Spinors Club Poland">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <script src="/assets/javascript/jquery-2.1.4.min.js"></script>
+  <script src="/assets/javascript/howler.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.show-magda-link').click(function() {
+        $('.confirm-magda').hide();
+        $('.magda-content').css('visibility', 'visible');
+        $('.magda-content').hide();
+        $('.magda-content').slideDown();
+      });
+      $('.no-magda-link').click(function() {
+        $('.confirm-magda').hide();
+        $('.magda-content').hide();
+        $('.no-magda').show();
+      });
+    });
+  </script>
+
+  <style>
+    p {
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body style="padding-top: 0px">
+  <div class="confirm-magda" style="font-size: 32px; text-align: center">
+    Aby zobaczyć Magdę Gessler wąchającą ogórka, musisz mieć 18 lat.<br />
+    <br />
+    Czy masz 18 lat?
+    <a href="#" class="show-magda-link">Tak</a>&nbsp;&nbsp;
+    <a href="#" class="no-magda-link">Nie</a>
+  </div>
+  <div class="magda-content" style="display: none; text-align: center">
+    <img src="/assets/images/magda-gessler.jpg" />
+    <p>
+      Magda Gessler wącha ogórka.
+    </p>
+  </div>
+  <div class="no-magda" style="display: none; text-align: center">
+    <p>
+      <span style="font-size: 100px; color: green">:(</span><br /><br />
+
+Nie masz 18 lat. Wciąż możesz zapoznać się ze <a href="/stanowiska.html">stanowiskami</a> Klubu Spinorów.
+    </p>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,115 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Spinors Club Poland</title>
+  <meta name="description" content="Spinors Club - oficjalna strona.">
+  <meta name="author" content="Spinors Club Poland">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <script src="/assets/javascript/jquery-2.1.4.min.js"></script>
+  <script src="/assets/javascript/howler.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.start-music-link').click(function() {
+        if (window.spinor_sound) {
+          window.spinor_sound.stop();
+          window.spinor_sound = undefined;
+        }
+        window.spinor_sound = new Howl({
+          urls: ['/assets/media/spinor.mp3'],
+          loop: true
+        });
+        spinor_sound.play();
+        return false;
+      });
+
+      $('.start-music-link-2').click(function() {
+        if (window.spinor_sound) {
+          window.spinor_sound.stop();
+          window.spinor_sound = undefined;
+        }
+        window.spinor_sound = new Howl({
+          urls: ['/assets/media/spinor-2x.mp3'],
+          loop: true
+        });
+        spinor_sound.play();
+        return false;
+      });
+    });
+  </script>
+
+  <style>
+    html {
+      margin: 0 !important;
+      padding: 0 !important;  
+    }
+
+    .title {
+      font-size: 48px;
+    }
+
+    .mainmenu {
+      list-style: none;
+      padding-left: 0px;
+      margin: 0px;
+    }
+
+    .mainmenu li {
+      float: left;
+      margin-right: 20px;
+      font-size: 20px;
+    }
+    
+    p {
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body style="padding-top: 0px">
+  <span style="float: right; margin-bottom: 10px">
+    <a href="#" style="color: red" class="start-music-link">Włącz muzykę</a>
+    <a href="#" style="color: red" class="start-music-link-2">2x</a>
+  </span>
+
+  <h1 class="title">
+    <marquee behavior="alternate">
+      <img src="/assets/images/logo-2.gif" style="vertical-align: middle; -webkit-filter: brightness(120%);" height="95" />
+      Klub Spinora !!!
+      <span style="display: inline-block; vertical-align: middle">
+        <marquee direction="down" height="95px">
+          <img src="/assets/images/logo.png" style="vertical-align: middle" height="95" />
+        </marquee>
+      </span>
+    </marquee>
+  </h1>
+  <marquee direction="right" behavior="alternate">
+    <ul class="mainmenu">
+      <li><a href="/recenzje.html">Recenzje restauracji</a></li>
+      <li><a href="/ranking-bondow.html">Półroczny ranking Bondów</a></li>
+      <li><a href="/komunikaty.html">Komunikaty</a></li>
+      <li><a href="/stanowiska.html">Stanowiska</a></li>
+      <li><a href="/magda-gessler.html">Magda Gessler</a></li>
+    </ul>
+  </marquee>
+
+  <p>
+    Witaj na <a href="https://pl.wikipedia.org/wiki/Przymiotnik#Stopniowanie">najlepszej</a><span style="vertical-align: super">*</span> stronie Spinora!
+  </p>
+  <p>
+    W ostatnim czasie w sieci pojawiły się strony podszywające się pod Klub Spinora. Nasz klub stanowczo sprzeciwa się takim praktykom.
+  </p>
+  <p style="font-size: 14px">
+    -----<br />
+    * Nie mylić z <a href="https://pl.wikipedia.org/wiki/Najlepszy">powieścią</a> łotrzykowsko-heroiczną Waldemara Łysiaka.
+  </p>
+</body>
+</html>
+
